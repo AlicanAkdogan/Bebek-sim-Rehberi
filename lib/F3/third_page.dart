@@ -44,7 +44,47 @@ class _third_pageState extends State<third_page> {
                 var ayar = ayarlarListesi[index];
                 return GestureDetector(
                   onTap: () {
-                    print("object");
+                    if (index == 0) {
+                      print("Uygulama değerlendirmeye tıklandı");
+                    } else if (index == 1) {
+                      //print("Uygulama Sürümüne Tıklandı");
+                      showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text("Uygulama Sürümü"),
+                              content: Text("1.0.0"),
+                              actions: [
+                                TextButton(
+                                  child: Text("Kapat"),
+                                  onPressed: () {
+                                    //print("İptal Tıklandı");
+                                    Navigator.pop(context);
+                                  },
+                                )
+                              ],
+                            );
+                          });
+                    } else if (index == 2) {
+                      //print("İletişime tıklandı");
+                      showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text("İletişim"),
+                              content: Text("Mail : alican@aynadakiyazar.com"),
+                              actions: [
+                                TextButton(
+                                  child: Text("Kapat"),
+                                  onPressed: () {
+                                    //print("İptal Tıklandı");
+                                    Navigator.pop(context);
+                                  },
+                                )
+                              ],
+                            );
+                          });
+                    }
                   },
                   child: SizedBox(
                     height: 100,

@@ -2,7 +2,7 @@
     <application
         android:label="Bebek İsim Rehberi"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher2_round">
         <activity
             android:name=".MainActivity"
             android:exported="true"
